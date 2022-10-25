@@ -1,0 +1,58 @@
+{
+  "/api/attack": {
+    "post": {
+      "summary": "This endpoint is for Attak",
+      
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Coordinates"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Successful Operation.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Coordinates"
+              }
+            }
+          }
+        },
+        "201": {
+          "description": "Partially Success.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Coordinates"
+              }
+            }
+          }
+        },
+        "202": {
+          "description": "Bad Request.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "204": {
+          "description": "No Content."
+        },
+        "400": {
+          "description": "Bad Request."
+        },
+        "401": {
+          "description": "User is unauthorised to access the API."
+        }
+      }
+    }
+  }
+}
